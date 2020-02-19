@@ -1,0 +1,5 @@
+FROM java:8
+EXPOSE 8088
+ARG JAR_FILE=build/libs/dockerdemo-1.jar
+ADD ${JAR_FILE} dockerdemo-1.jar
+ENTRYPOINT [“java”, “-jar”, "dockerdemo-1.jar"]
